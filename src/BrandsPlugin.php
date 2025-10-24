@@ -6,6 +6,7 @@ namespace Mortezaa97\Brands;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Mortezaa97\Brands\Filament\Resources\Brands\BrandResource;
 
 class BrandsPlugin implements Plugin
 {
@@ -23,7 +24,7 @@ class BrandsPlugin implements Plugin
     {
         $panel
             ->resources([
-                //                'AddressResource' => AddressResource::class,
+                'BrandResource' => BrandResource::class,
             ]);
     }
 
