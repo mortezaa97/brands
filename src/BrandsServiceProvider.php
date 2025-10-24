@@ -2,6 +2,7 @@
 
 namespace Mortezaa97\Brands;
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use Mortezaa97\Brands\Models\Brand;
 use Mortezaa97\Brands\Policies\BrandPolicy;
@@ -20,7 +21,7 @@ class BrandsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('coupons.php'),
+                __DIR__ . '/../config/config.php' => config_path('brands.php'),
             ], 'config');
 
             $this->publishes([
