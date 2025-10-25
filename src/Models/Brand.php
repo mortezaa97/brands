@@ -21,7 +21,13 @@ class Brand extends Model
         'created_at',
         'updated_at'
     ];
-
+    protected function casts(): array
+    {
+        return [
+            'meta_keywords' => 'array',
+            'color' => 'string',
+        ];
+    }
     protected $appends = [];
     protected $with = [];
 

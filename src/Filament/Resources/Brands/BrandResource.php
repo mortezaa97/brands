@@ -22,7 +22,14 @@ class BrandResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'Brand';
+    protected static ?string $navigationLabel = 'برندها';
+
+    protected static ?string $modelLabel = 'برند';
+
+    protected static ?string $pluralModelLabel = 'برندها';
+
+    protected static string|null|\UnitEnum $navigationGroup = 'فروشگاه';
+
 
     public static function form(Schema $schema): Schema
     {

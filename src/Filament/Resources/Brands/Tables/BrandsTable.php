@@ -17,15 +17,13 @@ class BrandsTable
     {
         return $table
             ->columns([
+                \App\Filament\Components\Table\LogoImageColumn::create(),
                 \App\Filament\Components\Table\NameTextColumn::create(),
                 \App\Filament\Components\Table\SlugTextColumn::create(),
-                \App\Filament\Components\Table\LogoImageColumn::create(),
                 \App\Filament\Components\Table\StatusTextColumn::create(Brand::class),
-                \App\Filament\Components\Table\CategoryTextColumn::create(),
                 \App\Filament\Components\Table\MetaTitleTextColumn::create(),
                 \App\Filament\Components\Table\MetaKeywordsTextColumn::create(),
                 \App\Filament\Components\Table\PageTitleTextColumn::create(),
-                \Filament\Tables\Columns\TextColumn::make('color')->searchable(),
                 \App\Filament\Components\Table\CreatedByTextColumn::create(),
                 \App\Filament\Components\Table\UpdatedByTextColumn::create(),
                 \App\Filament\Components\Table\DeletedAtTextColumn::create(),
